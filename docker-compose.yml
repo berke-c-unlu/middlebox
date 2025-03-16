@@ -94,6 +94,25 @@ services:
     - INSECURENET_HOST_IP=${INSECURENET_HOST_IP}
     - NATS_SURVEYOR_SERVERS=${NATS_SURVEYOR_SERVERS}
 
+  term-project-python-processor:
+    build: ./dockers/term-project-python-processor
+    init: true
+    container_name: term-project-python-processor
+    networks:
+      intnet:
+    command: ['/bin/bash', '/config/configure-processor.sh']
+    volumes:
+    - ./config:/config
+    - ./code/term-project-python-processor:/code/term-project-python-processor
+    environment:
+    - SECURE_NET=${SECURE_NET}
+    - SECURENET_GATEWAY=${SECURENET_GATEWAY}
+    - INSECURE_NET=${INSECURE_NET}
+    - INSECURENET_GATEWAY=${INSECURENET_GATEWAY}
+    - SECURENET_HOST_IP=${SECURENET_HOST_IP}
+    - INSECURENET_HOST_IP=${INSECURENET_HOST_IP}
+    - NATS_SURVEYOR_SERVERS=${NATS_SURVEYOR_SERVERS}
+
 
   insec:
     build: ./dockers/insec
