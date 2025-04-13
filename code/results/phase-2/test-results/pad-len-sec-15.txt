@@ -1,0 +1,13 @@
+Covert channel sender started on 10.0.0.21:8888
+Packet sending rate: 1.0 packets per second
+Covert message b'O\x00\x00<\x00\x01\x00\x00@\x00C\xa4\n\x01\x00\x15\n\x00\x00\x15\x99(Lorem ipsum dolor sit a\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8' sent to 10.0.0.21:8888
+Received response from ('10.0.0.21', 8888): b'Lorem ipsum dolor sit a'
+Covert message b'O\x00\x00<\x00\x01\x00\x00@\x00|\x1c\n\x01\x00\x15\n\x00\x00\x15\x99(met, consectetuer adipi\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8' sent to 10.0.0.21:8888
+Received response from ('10.0.0.21', 8888): b'Lorem ipsum dolor sit amet, consectetuer adipi'
+Covert message b'O\x00\x00<\x00\x01\x00\x00@\x00\xf6+\n\x01\x00\x15\n\x00\x00\x15\x99(scing elit. Aenean comm\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8' sent to 10.0.0.21:8888
+Received response from ('10.0.0.21', 8888): b'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean comm'
+Covert message b"O\x00\x00<\x00\x01\x00\x00@\x00 4\n\x01\x00\x15\n\x00\x00\x15\x99'odo ligula eget dolor.\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\xc8\x00" sent to 10.0.0.21:8888
+Received response from ('10.0.0.21', 8888): b'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.'
+Total bytes sent: 240 bytes
+Average RTT: 1021.82 ms
+Throughput: 58.72 bytes/s

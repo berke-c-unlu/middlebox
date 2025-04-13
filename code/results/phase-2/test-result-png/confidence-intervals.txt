@@ -1,0 +1,19 @@
+Padding Length Test Confidence Interval for Average RTT: (1016.4048208217708, 1036.595179178229)
+Padding Length Test Confidence Interval for Total Bytes Sent: (144.0691589987695, 343.93084100123053)
+Padding Length Test Confidence Interval for Throughput: (53.06643277297813, 58.763567227021866)
+Padding Length Test Mean for Average RTT: 1026.5
+Padding Length Test Mean for Total Bytes Sent: 244.0
+Padding Length Test Mean for Throughput: 55.915
+
+Message Length Test Confidence Interval for Average RTT: (1018.756451465422, 1030.7435485345782)
+Message Length Test Confidence Interval for Total Bytes Sent: (170.9809853545612, 937.0190146454388)
+Message Length Test Confidence Interval for Throughput: (55.18299269078315, 57.94700730921684)
+Message Length Test Mean for Average RTT: 1024.75
+Message Length Test Mean for Total Bytes Sent: 554.0
+Message Length Test Mean for Throughput: 56.565
+
+Packet Rate Test Confidence Interval for Average RTT: (-141.28741759930404, 2032.787417599304)
+Packet Rate Length Test Confidence Interval for Throughput: (-26.80658836885243, 244.04658836885244)
+Packet Rate Test Mean for Average RTT: 945.75
+Packet Rate Test Mean for Total Bytes Sent: 220.0
+Packet Rate Test Mean for Throughput: 108.62
