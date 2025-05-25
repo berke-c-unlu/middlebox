@@ -2,19 +2,19 @@
 
 ### Padding length test
 
-# docker compose exec -d term-project-python-processor python3 main.py
-# echo "Started main.pyin term-project-python-processor"
+docker compose exec -d term-project-python-processor python3 main.py
+echo "Started main.py in term-project-python-processor"
 
-# docker compose exec -d insec python3 covert-channel-receiver.py --pad-len 5
-# echo "Started covert-channel-receiver.py in insec"
+docker compose exec -d insec python3 covert-channel-receiver.py
+echo "Started covert-channel-receiver.py in insec"
 
-# docker compose exec sec python3 covert-channel-sender.py --pad-len 5 --secret-message "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."  > ./test-results/pad-len-sec-5.txt 2>&1 &
-# echo "Started covert-channel-sender.py in sec"
-# sec_pid=$!
+docker compose exec sec python3 covert-channel-sender.py --noise-rate 0.5 --secret-message "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."  > ./test-results/pad-len-sec-5.txt 2>&1 &
+echo "Started covert-channel-sender.py in sec"
+sec_pid=$!
 
-# wait $sec_pid
-# echo "sec container exited, logs are written"
-# docker compose restart
+wait $sec_pid
+echo "sec container exited, logs are written"
+docker compose restart
 
 # #######################################################################################
 
