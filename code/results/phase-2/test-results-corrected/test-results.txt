@@ -1,0 +1,111 @@
+### Secret Message Length
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur porttitor."
+Total bytes sent: 928 bytes
+Average RTT: 2205.69 ms
+Throughput: 32.36 bytes/s
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante."
+Total bytes sent: 1548 bytes
+Average RTT: 2052.56 ms
+Throughput: 30.17 bytes/s
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque est risus, sed sollicitudin leo lacinia vel. Nam eget feugiat justo, id at."
+Total bytes sent: 2540 bytes
+Average RTT: 2022.43 ms
+Throughput: 33.05 bytes/s
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus."
+Total bytes sent: 3148 bytes
+Average RTT: 2046.11 ms
+Throughput: 30.77 bytes/s
+
+### Noise Rate
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0
+Total bytes sent: 1052 bytes
+Average RTT: 1029.66 ms
+Throughput: 40.87 bytes/s
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.25
+Total bytes sent: 1288 bytes
+Average RTT: 1514.52 ms
+Throughput: 34.02 bytes/s
+
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.5
+Total bytes sent: 1932 bytes
+Average RTT: 2495.65 ms
+Throughput: 30.97 bytes/s
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.75
+Total bytes sent: 3432 bytes
+Average RTT: 5073.96 ms
+Throughput: 27.06 bytes/s
+
+### Pad Len 
+
+python3 covert-channel-receiver.py --pad-len 1
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 1
+Total bytes sent: 6844 bytes
+Average RTT: 2014.72 ms
+Throughput: 33.97 bytes/s
+
+python3 covert-channel-receiver.py --pad-len 2
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 2
+Total bytes sent: 3096 bytes
+Average RTT: 2023.52 ms
+Throughput: 30.60 bytes/s
+
+
+python3 covert-channel-receiver.py --pad-len 3
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 3
+Total bytes sent: 2544 bytes
+Average RTT: 2555.83 ms
+Throughput: 29.28 bytes/s
+
+
+python3 covert-channel-receiver.py --pad-len 4
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 4
+Total bytes sent: 1644 bytes
+Average RTT: 2292.53 ms
+Throughput: 28.68 bytes/s
+
+
+
+
+
+Padding Length Test Confidence Interval for Average RTT: (1866.3945726984562, 2575.605427301544)
+Padding Length Test Confidence Interval for Total Bytes Sent: (379.5174583163007, 6684.482541683699)
+Padding Length Test Confidence Interval for Throughput: (25.983162313270014, 34.17183768672999)
+Padding Length Test Confidence Interval for Covert Throughput: (0.35136861262010666, 1.8686313873798936)
+Padding Length Test Mean for Average RTT: 2221.0
+Padding Length Test Mean for Total Bytes Sent: 3532.0
+Padding Length Test Mean for Throughput: 30.0775
+Padding Length Test Mean for Covert Throughput: 1.11
+
+Message Length Test Confidence Interval for Average RTT: (1966.167184995483, 2196.3328150045168)
+Message Length Test Confidence Interval for Total Bytes Sent: (673.0412717494487, 3408.9587282505513)
+Message Length Test Confidence Interval for Throughput: (29.736394638448317, 33.43860536155168)
+Message Length Test Confidence Interval for Covert Throughput: (0.3927186616444933, 3.467281338355507)
+Message Length Test Mean for Average RTT: 2081.25
+Message Length Test Mean for Total Bytes Sent: 2041.0
+Message Length Test Mean for Throughput: 31.5875
+Message Length Test Mean for Covert Throughput: 1.9300000000000002
+
+Noise Rate Test Confidence Interval for Average RTT: (43.03189605575835, 5012.468103944242)
+Noise Rate Test Confidence Interval for Total Bytes Sent: (450.5765683265247, 3401.4234316734755)
+Noise Rate Test Confidence Interval for Throughput: (25.46431537216595, 40.59568462783405)
+Noise Rate Test Confidence Interval for Covert Throughput: (0.40738223525267947, 4.01261776474732)
+Noise Rate Test Mean for Average RTT: 2527.75
+Noise Rate Test Mean for Total Bytes Sent: 1926.0
+Noise Rate Test Mean for Throughput: 33.03
+Noise Rate Test Mean for Covert Throughput: 2.21

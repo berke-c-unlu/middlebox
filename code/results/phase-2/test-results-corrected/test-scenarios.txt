@@ -1,0 +1,41 @@
+### Secret Message Length
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur porttitor."
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante."
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque est risus, sed sollicitudin leo lacinia vel. Nam eget feugiat justo, id at."
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus."
+
+### Noise Rate
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.25
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.5
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --noise-rate 0.75
+
+### Pad Len 
+
+python3 covert-channel-receiver.py --pad-len 1
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 1
+
+python3 covert-channel-receiver.py --pad-len 2
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 2
+
+python3 covert-channel-receiver.py --pad-len 3
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 3
+
+python3 covert-channel-receiver.py --pad-len 4
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis mauris porta ante." --pad-len 4

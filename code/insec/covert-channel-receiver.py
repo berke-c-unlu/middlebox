@@ -1,11 +1,15 @@
 import socket
-from scapy.layers.inet import IP, IPOption, UDP
+from scapy.layers.inet import IP, UDP
+import argparse
 
 class Receiver:
-    def __init__(self):
+    def __init__(self, pad_len=4):
         self.opt_types = [182, 186, 187, 188, 189, 191, 214, 218, 219, 220, 221, 223, 246, 250, 251, 252]
         self.received_messages = []
         self.port = 8888
+        self.pad_len = pad_len
+        self.received_pkt_count = 0
+        self.received_byte_count = 0
 
     def start(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -27,41 +31,20 @@ class Receiver:
                         sock.sendto("Finish".encode(), addr)
                         continue
 
-                    if IP not in ip_pkt:
-                        print("No IP layer found, skipping...")
-                        sock.sendto("".encode(), addr)  
-                        continue
-
                     if IP in ip_pkt and not ip_pkt.options:
                         print("No IP options found, skipping...")
                         sock.sendto("".encode(), addr)  
                         continue
 
-                    for opt in ip_pkt.options:
-                        if isinstance(opt, IPOption):
-                            option_type = bytes(opt)[0]
-                            print(option_type)
-                            if option_type not in self.opt_types:
-                                print(f"Unknown option type: {option_type}, skipping...")
-                                sock.sendto("".encode(), addr)
-                                continue
+                    options_len = sum(len(opt) for opt in ip_pkt.options)
 
-                            payload = bytes(opt)[2:]
-                            print(f"Received message: {payload}")
-
-                            padding_length = self.__find_pad_len(payload) + 1  # +1 for the padding length byte
-                            if padding_length == 0:
-                                print("No padding found, skipping...")
-                                sock.sendto("".encode(), addr)  
-                                continue
-
-                            covert_message = payload[:len(payload) - padding_length]
-                            print(f"Covert message: {covert_message}")
-
-                            self.received_messages.append(covert_message.decode())
-                            print("".join(self.received_messages))
-
-                            sock.sendto(bytes("".join(self.received_messages).encode()), addr)            
+                    raw = bytes(ip_pkt)
+                    start = 20 + options_len
+                    self.received_messages.append(raw[start:start+self.pad_len].rstrip(b'\x00').decode())
+                    print(f"raw packet: {raw}")
+                    print(f"Received covert message: {self.received_messages[-1]}")
+                            
+                    sock.sendto(bytes("".join(self.received_messages).encode()), addr)            
                 except Exception as e:
                     print(f"Error processing packet: {e}")
 
@@ -70,15 +53,17 @@ class Receiver:
             print("All received messages:")
             print("".join(self.received_messages))
 
-    def __find_pad_len(self, message: bytes) -> int:
-        # last byte of this message is reserved for the length of the padding
-        if not message or len(message) < 1:
-            return -1
-        if message[-1] == 0:
-            return -1
-        return message[-1]
-        
+def parse_args():
+    parser = argparse.ArgumentParser(description="Covert Channel Sender")
+    parser.add_argument(
+        "--pad-len",
+        type=int,
+        default=4,
+        help="The length of padding for covert messages",
+    )
+    return parser.parse_args()
     
 if __name__ == "__main__":
-    receiver = Receiver()
+    args = parse_args()
+    receiver = Receiver(args.pad_len)
     receiver.start()

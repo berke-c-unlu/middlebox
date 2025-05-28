@@ -1,0 +1,19 @@
+### Remove
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message 
+python3 main.py --mitigation-strategy modify_and_send
+
+Total bytes sent: 4024 bytes
+Average RTT: 1658.06 ms
+Throughput: 32.36 bytes/s
+
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 4.96 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77

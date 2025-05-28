@@ -1,0 +1,292 @@
+### Secret Message Length
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus."
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00
+Very high frequency of uncommon IP option types: 0.71 (Threshold: 0.8)
+Low average entropy of padding lengths: 4.24 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.75
+Total Suspicion Score: 0.85
+Suspicious activity detected with 0.85 suspicion score.
+Suspicious activity detected with score: 0.85
+
+Total bytes sent: 3528 bytes
+Average RTT: 2311.87 ms
+Throughput: 30.52 bytes/s
+
+############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget augue lectus. Quisque tempus neque eu ante fermentum vulputate. Mauris id sem quis velit tempor gravida. Suspendisse pulvinar congue rhoncus. Sed eu vehicula nisl, vel aliquam ipsum. Sed lacinia vehicula ullamcorper. Mauris molestie."
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 4.65 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+
+Total bytes sent: 4668 bytes
+Average RTT: 2006.91 ms
+Throughput: 31.01 bytes/s
+
+############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae nibh molestie, gravida sem fermentum, rutrum nisi. Curabitur pharetra elit ligula, at mollis quam pretium in. Vivamus sodales pretium tortor, pretium congue nisl viverra ultrices. Curabitur massa arcu, condimentum vel gravida vitae, scelerisque vitae leo. Praesent sed consectetur dui. Pellentesque euismod, augue posuere fusce."
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.71 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 4.66 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+
+Total bytes sent: 6716 bytes
+Average RTT: 2182.83 ms
+Throughput: 30.77 bytes/s
+
+############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id purus et leo mattis eleifend. Nulla magna lectus, blandit et diam sit amet, auctor malesuada mauris. Mauris vestibulum, nunc vitae facilisis vulputate, leo neque vulputate neque, vitae auctor nunc est quis justo. Morbi eros ipsum, pharetra vel nisi eleifend, convallis hendrerit massa. Vestibulum iaculis vestibulum sodales. Morbi in nulla at nunc eleifend dictum. Morbi consectetur magna vel justo vulputate, sed semper nulla turpis."
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.73 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 5.01 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+
+Total bytes sent: 7472 bytes
+Average RTT: 1899.91 ms
+Throughput: 31.46 bytes/s
+
+### Noise Rate
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --noise-rate 0
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.75 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 5.15 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+
+Total bytes sent: 2072 bytes
+Average RTT: 1026.25 ms
+Throughput: 40.38 bytes/s
+
+##############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --noise-rate 0.25
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.74 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 5.11 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+Total bytes sent: 2444 bytes
+Average RTT: 1372.59 ms
+Throughput: 35.61 bytes/s
+############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --noise-rate 0.5
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.74 (Threshold: 0.8)
+Low average entropy of padding lengths: 4.48 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.75
+Total Suspicion Score: 0.85
+Suspicious activity detected with 0.85 suspicion score.
+Suspicious activity detected with score: 0.85
+
+Total bytes sent: 2972 bytes
+Average RTT: 1866.75 ms
+Throughput: 31.84 bytes/s
+############
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --noise-rate 0.75
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Very Low average entropy of padding lengths: 3.41 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.93
+Suspicious activity detected with 0.93 suspicion score.
+Suspicious activity detected with score: 0.93
+
+Total bytes sent: 5304 bytes
+Average RTT: 3932.25 ms
+Throughput: 26.98 bytes/s
+
+### Pad Len 
+
+python3 covert-channel-receiver.py --pad-len 1
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --pad-len 1
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.71 (Threshold: 0.8)
+Very Low average entropy of padding lengths: 2.23 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.93
+Suspicious activity detected with 0.93 suspicion score.
+Suspicious activity detected with score: 0.93
+
+Total bytes sent: 12828 bytes
+Average RTT: 1909.88 ms
+Throughput: 33.58 bytes/s
+
+############
+
+python3 covert-channel-receiver.py --pad-len 2
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --pad-len 2
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Moderate average entropy of padding lengths: 4.73 (Threshold: 5.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.50
+Total Suspicion Score: 0.77
+Suspicious activity detected with 0.77 suspicion score.
+Suspicious activity detected with score: 0.77
+
+Total bytes sent: 6804 bytes
+Average RTT: 2219.11 ms
+Throughput: 30.66 bytes/s
+############
+
+python3 covert-channel-receiver.py --pad-len 3
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --pad-len 3
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Low average entropy of padding lengths: 4.35 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.75
+Total Suspicion Score: 0.85
+Suspicious activity detected with 0.85 suspicion score.
+Suspicious activity detected with score: 0.85
+
+Total bytes sent: 4456 bytes
+Average RTT: 2203.36 ms
+Throughput: 30.18 bytes/s
+############
+
+python3 covert-channel-receiver.py --pad-len 4
+python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies nisl, quis ornare lacus pulvinar eu. Sed a malesuada nibh, quis lacinia ligula. Pellentesque rutrum, lorem sed metus." --pad-len 4
+python3 main.py --suspicion-threshold 0.4
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.72 (Threshold: 0.8)
+Low average entropy of padding lengths: 4.42 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 0.75
+Total Suspicion Score: 0.85
+Suspicious activity detected with 0.85 suspicion score.
+Suspicious activity detected with score: 0.85
+
+Total bytes sent: 3428 bytes
+Average RTT: 2273.88 ms
+Throughput: 30.15 bytes/s
+
+######
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --no-covert-pkt-count 100
+python3 main.py
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.59 (Threshold: 0.6)
+Very Low average entropy of padding lengths: 1.53 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.60
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.90
+Suspicious activity detected with 0.90 suspicion score.
+Suspicious activity detected with score: 0.90
+
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --no-covert-pkt-count 150
+python3 main.py
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.70 (Threshold: 0.8)
+Very Low average entropy of padding lengths: 1.84 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.93
+Suspicious activity detected with 0.93 suspicion score.
+Suspicious activity detected with score: 0.93
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --no-covert-pkt-count 50
+python3 main.py
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.71 (Threshold: 0.8)
+Very Low average entropy of padding lengths: 1.82 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.93
+Suspicious activity detected with 0.93 suspicion score.
+Suspicious activity detected with score: 0.93
+
+python3 covert-channel-receiver.py
+python3 covert-channel-sender.py --no-covert-pkt-count 200
+python3 main.py
+
+High frequency of IP options: 1.00 (Threshold: 0.8)
+Very high frequency of uncommon IP option types: 0.71 (Threshold: 0.8)
+Very Low average entropy of padding lengths: 1.82 (Threshold: 3.5)
+Option Frequency: 1.00
+Option Type Frequency: 0.80
+Option Padding Entropy: 1.00
+Total Suspicion Score: 0.93
+Suspicious activity detected with 0.93 suspicion score.
+Suspicious activity detected with score: 0.93

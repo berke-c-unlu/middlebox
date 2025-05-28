@@ -8,7 +8,7 @@ echo "Started main.py in term-project-python-processor"
 docker compose exec -d insec python3 covert-channel-receiver.py
 echo "Started covert-channel-receiver.py in insec"
 
-docker compose exec sec python3 covert-channel-sender.py --noise-rate 0.5 --secret-message "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."  > ./test-results/pad-len-sec-5.txt 2>&1 &
+docker compose exec sec python3 covert-channel-sender.py --secret-message "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor."  > ./test-results/pad-len-sec-5.txt 2>&1 &
 echo "Started covert-channel-sender.py in sec"
 sec_pid=$!
 
